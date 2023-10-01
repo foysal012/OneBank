@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onebankltd/screen/authentication/forgot_password_screen.dart';
 import 'package:onebankltd/screen/authentication/signup_page_screen.dart';
+import 'package:onebankltd/screen/bottom%20nav%20ber/bottom_navigationbar_page_screen.dart';
 
 class SignInPageScreen extends StatefulWidget {
   const SignInPageScreen({Key? key}) : super(key: key);
@@ -201,7 +202,7 @@ class _SignInPageScreenState extends State<SignInPageScreen> {
               InkWell(
                 onTap: (){
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Successfully Login...")));
-                  //
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>BottomNavigationbarPageScreen()));
                 },
                 child: Container(
 

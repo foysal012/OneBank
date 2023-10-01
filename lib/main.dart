@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:onebankltd/screen/authentication/signup_page_screen.dart';
+import 'package:onebankltd/screen/bottom%20nav%20ber/bottom_navigationbar_page_screen.dart';
 
 void main() {
 
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: SignUpPageScreen(),
+      //home: SignUpPageScreen(),
+      home: BottomNavigationbarPageScreen(),
 
     );
   }
