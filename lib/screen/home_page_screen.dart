@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onebankltd/screen/drawer/drawer_page_screen.dart';
 
 class HomePageScreen extends StatefulWidget {
   const HomePageScreen({Key? key}) : super(key: key);
@@ -8,13 +9,19 @@ class HomePageScreen extends StatefulWidget {
 }
 
 class _HomePageScreenState extends State<HomePageScreen> {
+
+  GlobalKey<ScaffoldState> _scafoldKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+    key: _scafoldKey,
+      drawer: DrawerPageScreen(),
       appBar: AppBar(
         leading: IconButton(
-            onPressed: (){},
+            onPressed: (){
+              _scafoldKey.currentState!.openDrawer();
+            },
             icon: Icon(Icons.menu, color: Colors.black, size: 40,)
         ),
 
