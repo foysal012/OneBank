@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:onebankltd/screen/drawer/drawer_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/air_time_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/bill_payment_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/contact_obl_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/fund_transfer_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/obl_banking_page_screen.dart';
 
 class HomePageScreen extends StatefulWidget {
   const HomePageScreen({Key? key}) : super(key: key);
@@ -8,16 +13,30 @@ class HomePageScreen extends StatefulWidget {
   State<HomePageScreen> createState() => _HomePageScreenState();
 }
 
-class _HomePageScreenState extends State<HomePageScreen> {
+class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProviderStateMixin {
 
   GlobalKey<ScaffoldState> _scafoldKey = GlobalKey();
+
+  TabController? _tabController;
+
+  bool selected = false;
+  var index = 0;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    _tabController = TabController(length: 5, vsync: this);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
     key: _scafoldKey,
       drawer: DrawerPageScreen(),
+
       appBar: AppBar(
+        backgroundColor: Colors.grey,
         leading: IconButton(
             onPressed: (){
               _scafoldKey.currentState!.openDrawer();
@@ -110,7 +129,167 @@ class _HomePageScreenState extends State<HomePageScreen> {
       ),
 
       body: Container(
-        color: Colors.red,
+        color: Colors.grey,
+        child: Column(
+          children: [
+            SizedBox(height: 10,),
+
+            Expanded(
+                flex: 2,
+                child: Container(
+                  child: TabBar(
+                    controller: _tabController,
+                    isScrollable: true,
+                    indicator: BoxDecoration(
+                      //color: Colors.red,
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(
+                        width: 5,
+                        color: Colors.red,
+                      )
+                    ),
+                    indicatorColor: Colors.red,
+                    onTap: (val){
+                      print("Index is $val");
+                    },
+                    tabs: [
+                      Container(
+                        height: 100,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("OBL Banking"),
+                            Text("OBL Banking"),
+                          ],
+                        ),
+                      ),
+
+                      Container(
+                        height: 100,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color:  Colors.white,
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Fund Transfer"),
+                            Text("Fund Transfer"),
+                          ],
+                        ),
+                      ),
+
+                      Container(
+                        height: 100,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color:   Colors.white,
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Bill Payment"),
+                            Text("Bill Payment"),
+                          ],
+                        ),
+                      ),
+
+                      Container(
+                        height: 100,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color:  Colors.white,
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Airtime"),
+                            Text("Airtime"),
+                          ],
+                        ),
+                      ),
+
+                      Container(
+                        height: 100,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color:  Colors.white,
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Contact OBL"),
+                            Text("Contact OBL"),
+                          ],
+                        ),
+                      )
+                    ],
+
+                  ),
+                )
+            ),
+
+            SizedBox(height: 20,),
+
+
+              Expanded(
+                  flex: 8,
+                  child: TabBarView(
+                    controller: _tabController,
+                    children: [
+                      ClipRRect(
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(40),
+                              topRight: Radius.circular(40)
+                          ),
+                          child: OblBankingPageScreen()
+                      ),
+
+                      ClipRRect(
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(40),
+                              topRight: Radius.circular(40)
+                          ),
+                          child: FundTransferPageScreen()
+                      ),
+
+                      ClipRRect(
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(40),
+                              topRight: Radius.circular(40)
+                          ),
+                          child: BillPaymentPageScreen()
+                      ),
+
+                      ClipRRect(
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(40),
+                              topRight: Radius.circular(40)
+                          ),
+                          child: AirTimePageScreen(),
+                      ),
+
+                      ClipRRect(
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(40),
+                              topRight: Radius.circular(40)
+                          ),
+                          child: ContactOblPageScreen()
+                      )
+                    ],
+                  )),
+
+          ],
+        ),
       ),
     );
   }

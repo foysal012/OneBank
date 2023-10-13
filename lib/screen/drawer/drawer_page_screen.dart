@@ -13,241 +13,244 @@ class _DrawerPageScreenState extends State<DrawerPageScreen> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Column(
-        children: [
+      child: Container(
+        color: Color(0xffF3E9ED),
+        child: Column(
+          children: [
 
-          Expanded(
-              flex: 3,
-              child: Container(
-                alignment: Alignment.centerLeft,
-                padding: EdgeInsets.only(
-                  left: 20,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 70,
-                      width: 70,
-                      decoration: BoxDecoration(
-                        //color: Colors.yellow,
-                        image: DecorationImage(image: AssetImage("images/w3.jpg"),fit: BoxFit.cover),
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(
-                          color: Colors.red,
-                          width: 2,
-                        ),
-                      ),
-                    ),
-
-                    Text("Foysal Joarder",
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                    ),
-
-                    Text("OBL58426652",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.redAccent,
-                      ),
-                    ),
-                  ],
-                ),
-              )
-          ),
-
-          Expanded(
-              flex: 4,
-              child: Container(
-                padding: EdgeInsets.only(
-                  left: 20,
-                  right: 20,
-                ),
-                child: Column(
-                  children: [
-
-                    DrawerItemWidget(
-                      onTap: () {
-
-                      },
-                      title: "Banking",
-                    ),
-
-                    SizedBox(
-                      height: 5,
-                    ),
-
-                    DrawerItemWidget(
-                      onTap: () {
-
-                      },
-                      title: "Fund Transfer",
-                    ),
-
-                    SizedBox(
-                      height: 5,
-                    ),
-
-                    DrawerItemWidget(
-                      onTap: () {
-
-                      },
-                      title: "Bill Pay",
-                    ),
-
-                    SizedBox(
-                      height: 5,
-                    ),
-
-                    DrawerItemWidget(
-                      onTap: () {
-
-                      },
-                      title: "Airtime",
-                    ),
-
-                    SizedBox(
-                      height: 5,
-                    ),
-
-                    DrawerItemWidget(
-                      onTap: () {
-
-                      },
-                      title: "EMI Calculator",
-                    ),
-
-                    SizedBox(
-                      height: 5,
-                    ),
-
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        DrawerItemWidget(
-                          onTap: () {
-
-                          },
-                          title: "Notification",
-                        ),
-
-                        Switch(
-                            value: isOn,
-                            onChanged: (value){
-                              setState(() {
-                                isOn = value;
-                              });
-                            },
-                          activeColor: Colors.white,
-                          activeTrackColor: Colors.red,
-                        ),
-                      ],
-                    ),
-
-                    SizedBox(
-                      height: 5,
-                    ),
-
-                    DrawerItemWidget(
-                      onTap: () {
-
-                      },
-                      title: "Settings",
-                    ),
-
-                    SizedBox(
-                      height: 5,
-                    ),
-
-                  ],
-                ),
-              ),),
-
-          Expanded(
-              flex: 3,
-              child: Container(
-                padding: EdgeInsets.only(
-                  left: 20,
-                  right: 20,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    
-                    Text("Call For Support",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black54,
-                        fontSize: 20,
-                      ),
-                    ),
-
-                    SizedBox(height: 5,),
-                    
-                    Row(
-                      children: [
-                        
-                        InkWell(
-                            onTap:(){
-                              
-                            },
-                            child: Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(16),
-                                color: Colors.red,
-                              ),
-                              child: Icon(Icons.wifi_calling_3_outlined, color: Colors.white,),
-                            ),
-                        ),
-                        
-                        SizedBox(width: 10,),
-                        
-                        Text("162453",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
+            Expanded(
+                flex: 3,
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  padding: EdgeInsets.only(
+                    left: 20,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          //color: Colors.yellow,
+                          image: DecorationImage(image: AssetImage("images/w3.jpg"),fit: BoxFit.cover),
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
                             color: Colors.red,
-                            fontSize: 18,
+                            width: 2,
                           ),
-                        )
-                      ],
-                    ),
+                        ),
+                      ),
 
-                    Spacer(),
+                      Text("Foysal Joarder",
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black87,
+                      ),
+                      ),
 
-                    InkWell(
-                      onTap: (){
+                      Text("OBL58426652",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.redAccent,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+            ),
 
-                      },
-                      child: Row(
+            Expanded(
+                flex: 4,
+                child: Container(
+                  padding: EdgeInsets.only(
+                    left: 20,
+                    right: 20,
+                  ),
+                  child: Column(
+                    children: [
+
+                      DrawerItemWidget(
+                        onTap: () {
+
+                        },
+                        title: "Banking",
+                      ),
+
+                      SizedBox(
+                        height: 5,
+                      ),
+
+                      DrawerItemWidget(
+                        onTap: () {
+
+                        },
+                        title: "Fund Transfer",
+                      ),
+
+                      SizedBox(
+                        height: 5,
+                      ),
+
+                      DrawerItemWidget(
+                        onTap: () {
+
+                        },
+                        title: "Bill Pay",
+                      ),
+
+                      SizedBox(
+                        height: 5,
+                      ),
+
+                      DrawerItemWidget(
+                        onTap: () {
+
+                        },
+                        title: "Airtime",
+                      ),
+
+                      SizedBox(
+                        height: 5,
+                      ),
+
+                      DrawerItemWidget(
+                        onTap: () {
+
+                        },
+                        title: "EMI Calculator",
+                      ),
+
+                      SizedBox(
+                        height: 5,
+                      ),
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Icon(Icons.logout, color: Colors.red,),
+                          DrawerItemWidget(
+                            onTap: () {
 
-                          SizedBox(width: 5,),
-
-                          Text("Log out",
-                          style: TextStyle(
-                            color: Colors.red,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 20,
+                            },
+                            title: "Notification",
                           ),
+
+                          Switch(
+                              value: isOn,
+                              onChanged: (value){
+                                setState(() {
+                                  isOn = value;
+                                });
+                              },
+                            activeColor: Colors.white,
+                            activeTrackColor: Colors.red,
+                          ),
+                        ],
+                      ),
+
+                      SizedBox(
+                        height: 5,
+                      ),
+
+                      DrawerItemWidget(
+                        onTap: () {
+
+                        },
+                        title: "Settings",
+                      ),
+
+                      SizedBox(
+                        height: 5,
+                      ),
+
+                    ],
+                  ),
+                ),),
+
+            Expanded(
+                flex: 3,
+                child: Container(
+                  padding: EdgeInsets.only(
+                    left: 20,
+                    right: 20,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+
+                      Text("Call For Support",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black54,
+                          fontSize: 20,
+                        ),
+                      ),
+
+                      SizedBox(height: 5,),
+
+                      Row(
+                        children: [
+
+                          InkWell(
+                              onTap:(){
+
+                              },
+                              child: Container(
+                                height: 50,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  color: Colors.red,
+                                ),
+                                child: Icon(Icons.wifi_calling_3_outlined, color: Colors.white,),
+                              ),
+                          ),
+
+                          SizedBox(width: 10,),
+
+                          Text("162453",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              color: Colors.red,
+                              fontSize: 18,
+                            ),
                           )
                         ],
                       ),
-                    ),
 
-                    SizedBox(height: 30,),
-                    
-                  ],
-                ),
-              )),
-        ],
+                      Spacer(),
+
+                      InkWell(
+                        onTap: (){
+
+                        },
+                        child: Row(
+                          children: [
+                            Icon(Icons.logout, color: Colors.red,),
+
+                            SizedBox(width: 5,),
+
+                            Text("Log out",
+                            style: TextStyle(
+                              color: Colors.red,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 20,
+                            ),
+                            )
+                          ],
+                        ),
+                      ),
+
+                      SizedBox(height: 30,),
+
+                    ],
+                  ),
+                )),
+          ],
+        ),
       ),
     );
   }
