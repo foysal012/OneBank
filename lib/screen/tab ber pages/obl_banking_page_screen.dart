@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/account%20type/savings_account_page_screen.dart';
 
 class OblBankingPageScreen extends StatefulWidget {
   const OblBankingPageScreen({Key? key}) : super(key: key);
@@ -46,7 +47,7 @@ class _OblBankingPageScreenState extends State<OblBankingPageScreen> {
 
           InkWell(
             onTap: (){
-
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => SavingAccountpageScreen()));
             },
             child: Container(
               height: 90,
