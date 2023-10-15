@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/account%20type/savings_account_page_screen.dart';
+import 'package:onebankltd/widget/select_operator_page_screen.dart';
+import 'package:onebankltd/widget/select_tag_page_screen.dart';
 
 class AirTimePageScreen extends StatefulWidget {
   const AirTimePageScreen({Key? key}) : super(key: key);
@@ -11,6 +13,8 @@ class AirTimePageScreen extends StatefulWidget {
 class _AirTimePageScreenState extends State<AirTimePageScreen> {
 
   TextEditingController _accountController = TextEditingController();
+
+  List<String> typeData = ["Prepaid", "Postpaid"];
 
   @override
   Widget build(BuildContext context) {
@@ -177,185 +181,217 @@ class _AirTimePageScreenState extends State<AirTimePageScreen> {
 
               SizedBox(height: 10,),
 
-              Row(
-                children: [
-                  Expanded(
-                    flex: 2,
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 62,
-                          width: 62,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border: Border.all(
-                                  width: 1,
-                                  color: Colors.red
-                              ),
-                              color: Colors.red[100]
-                          ),
-                          child: Icon(Icons.search, color: Colors.red,size: 30,),
-                        ),
-                        SizedBox(height: 2,),
-                        Text("GP")
-                      ],
-                    ),
-                  ),
+              // Row(
+              //   children: [
+              //     Expanded(
+              //       flex: 2,
+              //       child: Column(
+              //         children: [
+              //           Container(
+              //             height: 62,
+              //             width: 62,
+              //             decoration: BoxDecoration(
+              //                 borderRadius: BorderRadius.circular(5),
+              //                 border: Border.all(
+              //                     width: 1,
+              //                     color: Colors.red
+              //                 ),
+              //                 //color: Colors.red[100]
+              //             ),
+              //             child: Image.asset("images/w5.png",height: 50,width: 50),
+              //           ),
+              //           SizedBox(height: 2,),
+              //           Text("GP")
+              //         ],
+              //       ),
+              //     ),
+              //
+              //     SizedBox(width: 3,),
+              //
+              //     Expanded(
+              //       flex: 2,
+              //       child: Column(
+              //         children: [
+              //           Container(
+              //             height: 62,
+              //             width: 62,
+              //             decoration: BoxDecoration(
+              //                 borderRadius: BorderRadius.circular(5),
+              //                 border: Border.all(
+              //                     width: 1,
+              //                     color: Colors.red
+              //                 ),
+              //                 //color: Colors.red[100]
+              //             ),
+              //             child: Image.asset("images/w6.png",height: 60,width: 60),
+              //           ),
+              //           SizedBox(height: 2,),
+              //           Text("Banglalink")
+              //         ],
+              //       ),
+              //     ),
+              //
+              //     SizedBox(width: 3,),
+              //
+              //     Expanded(
+              //       flex: 2,
+              //       child: Column(
+              //         children: [
+              //           Container(
+              //             height: 62,
+              //             width: 62,
+              //             decoration: BoxDecoration(
+              //                 borderRadius: BorderRadius.circular(5),
+              //                 border: Border.all(
+              //                     width: 1,
+              //                     color: Colors.red
+              //                 ),
+              //                 //color: Colors.red[100]
+              //             ),
+              //             child: Image.asset("images/w7.png",height: 50,width: 50),
+              //           ),
+              //           SizedBox(height: 2,),
+              //           Text("Robi")
+              //         ],
+              //       ),
+              //     ),
+              //
+              //     SizedBox(width: 3,),
+              //
+              //     Expanded(
+              //       flex: 2,
+              //       child: Column(
+              //         children: [
+              //           Container(
+              //             height: 62,
+              //             width: 62,
+              //             decoration: BoxDecoration(
+              //                 borderRadius: BorderRadius.circular(5),
+              //                 border: Border.all(
+              //                     width: 1,
+              //                     color: Colors.red
+              //                 ),
+              //                 //color: Colors.red[100]
+              //             ),
+              //             child: Image.asset("images/w8.png",height: 50,width: 50),
+              //           ),
+              //           SizedBox(height: 2,),
+              //           Text("Teletalk")
+              //         ],
+              //       ),
+              //     ),
+              //
+              //     SizedBox(width: 3,),
+              //
+              //     Expanded(
+              //       flex: 2,
+              //       child: Column(
+              //         children: [
+              //           Container(
+              //             height: 62,
+              //             width: 62,
+              //             decoration: BoxDecoration(
+              //                 borderRadius: BorderRadius.circular(5),
+              //                 border: Border.all(
+              //                     width: 1,
+              //                     color: Colors.red
+              //                 ),
+              //                 //color: Colors.red[100]
+              //             ),
+              //             child: Image.asset("images/w9.png",height: 50,width: 50),
+              //           ),
+              //           SizedBox(height: 2,),
+              //           Text("Airtel")
+              //         ],
+              //       ),
+              //     )
+              //   ],
+              // ),
 
-                  SizedBox(width: 3,),
-
-                  Expanded(
-                    flex: 2,
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 62,
-                          width: 62,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border: Border.all(
-                                  width: 1,
-                                  color: Colors.red
-                              ),
-                              color: Colors.red[100]
-                          ),
-                          child: Icon(Icons.search, color: Colors.red,size: 30,),
-                        ),
-                        SizedBox(height: 2,),
-                        Text("Banglalink")
-                      ],
-                    ),
-                  ),
-
-                  SizedBox(width: 3,),
-
-                  Expanded(
-                    flex: 2,
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 62,
-                          width: 62,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border: Border.all(
-                                  width: 1,
-                                  color: Colors.red
-                              ),
-                              color: Colors.red[100]
-                          ),
-                          child: Icon(Icons.search, color: Colors.red,size: 30,),
-                        ),
-                        SizedBox(height: 2,),
-                        Text("Robi")
-                      ],
-                    ),
-                  ),
-
-                  SizedBox(width: 3,),
-
-                  Expanded(
-                    flex: 2,
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 62,
-                          width: 62,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border: Border.all(
-                                  width: 1,
-                                  color: Colors.red
-                              ),
-                              color: Colors.red[100]
-                          ),
-                          child: Icon(Icons.search, color: Colors.red,size: 30,),
-                        ),
-                        SizedBox(height: 2,),
-                        Text("Teletalk")
-                      ],
-                    ),
-                  ),
-
-                  SizedBox(width: 3,),
-
-                  Expanded(
-                    flex: 2,
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 62,
-                          width: 62,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border: Border.all(
-                                  width: 1,
-                                  color: Colors.red
-                              ),
-                              color: Colors.red[100]
-                          ),
-                          child: Icon(Icons.search, color: Colors.red,size: 30,),
-                        ),
-                        SizedBox(height: 2,),
-                        Text("Airtel")
-                      ],
-                    ),
-                  )
-                ],
-              ),
+              SelecteOperatorPageScreen(),
 
               SizedBox(height: 20,),
 
-              Row(
-                children: [
-                  Expanded(
-                    flex: 5,
-                    child: Container(
-                      height: 62,
-                      width: 62,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          border: Border.all(
-                              width: 1,
-                              color: Colors.red
-                          ),
-                          color: Colors.red[100]
-                      ),
-                      child: Center(child: Text("Prepaid",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            color: Colors.red
-                        ),
-                      ),),
-                    ),
-                  ),
+              // Row(
+              //   children: [
+              //     Expanded(
+              //       flex: 5,
+              //       child: Container(
+              //         height: 62,
+              //         width: 62,
+              //         decoration: BoxDecoration(
+              //             borderRadius: BorderRadius.circular(5),
+              //             border: Border.all(
+              //                 width: 1,
+              //                 color: Colors.red
+              //             ),
+              //             color: Colors.red[100]
+              //         ),
+              //         child: Center(child: Text("Prepaid",
+              //           style: TextStyle(
+              //               fontWeight: FontWeight.w500,
+              //               color: Colors.red
+              //           ),
+              //         ),),
+              //       ),
+              //     ),
+              //
+              //     SizedBox(width: 10,),
+              //
+              //     Expanded(
+              //       flex: 5,
+              //       child: Container(
+              //         height: 62,
+              //         width: 62,
+              //         decoration: BoxDecoration(
+              //             borderRadius: BorderRadius.circular(5),
+              //             border: Border.all(
+              //                 width: 1,
+              //                 color: Colors.red
+              //             ),
+              //             color: Colors.red[100]
+              //         ),
+              //         child: Center(child: Text("Postpaid",
+              //           style: TextStyle(
+              //               fontWeight: FontWeight.w500,
+              //               color: Colors.red
+              //           ),
+              //         ),),
+              //       ),
+              //     ),
+              //
+              //   ],
+              // ),
 
-                  SizedBox(width: 10,),
-
-                  Expanded(
-                    flex: 5,
-                    child: Container(
-                      height: 62,
-                      width: 62,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          border: Border.all(
-                              width: 1,
-                              color: Colors.red
-                          ),
-                          color: Colors.red[100]
-                      ),
-                      child: Center(child: Text("Postpaid",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            color: Colors.red
-                        ),
-                      ),),
-                    ),
-                  ),
-
-                ],
-              ),
+              // ListView.separated(
+              //     shrinkWrap: true,
+              //     scrollDirection: Axis.horizontal,
+              //     itemCount: typeData.length,
+              //     separatorBuilder: (_,index){
+              //       return Padding(padding: EdgeInsets.only(right: 10));
+              //     },
+              //     itemBuilder: (context, index){
+              //       return Container(
+              //         height: 62,
+              //         width: 62,
+              //         decoration: BoxDecoration(
+              //             borderRadius: BorderRadius.circular(5),
+              //             border: Border.all(
+              //                 width: 1,
+              //                 color: Colors.red
+              //             ),
+              //             color: Colors.red[100]
+              //         ),
+              //         child: Center(child: Text("${typeData[index]}",
+              //           style: TextStyle(
+              //               fontWeight: FontWeight.w500,
+              //               color: Colors.red
+              //           ),
+              //         ),),
+              //       );
+              //
+              //     }),
+              SelectTagePageScreen(),
 
               SizedBox(height: 10,),
 

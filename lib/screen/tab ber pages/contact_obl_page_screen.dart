@@ -119,7 +119,10 @@ class _ContactOblPageScreenState extends State<ContactOblPageScreen> {
               height: 60,
               width: double.infinity,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                ),
                 color: Colors.red,
               ),
               child: Center(child: Text("CALL NOW",
