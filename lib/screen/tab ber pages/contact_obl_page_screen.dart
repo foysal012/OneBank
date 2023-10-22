@@ -26,115 +26,118 @@ class _ContactOblPageScreenState extends State<ContactOblPageScreen> {
             ),
             color: Colors.white
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage("images/w4.png"),
-            ),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
 
-            SizedBox(height: 10,),
-
-            Text("Welcome To",
-              style: TextStyle(
-                fontWeight: FontWeight.w800,
-                color: Colors.black,
-                fontSize: 18,
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage("images/w4.png"),
               ),
-            ),
 
-            SizedBox(height: 8,),
+              SizedBox(height: 10,),
 
-            Text("One Bank Call Center",
-              style: TextStyle(
-                fontWeight: FontWeight.w800,
-                color: Colors.black,
-                fontSize: 18,
+              Text("Welcome To",
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  color: Colors.black,
+                  fontSize: 18,
+                ),
               ),
-            ),
 
-            SizedBox(
-              height: 8,
-            ),
+              SizedBox(height: 8,),
 
-            Text("You are able to call this number",
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-                color: Colors.black38,
-                fontSize: 18,
+              Text("One Bank Call Center",
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  color: Colors.black,
+                  fontSize: 18,
+                ),
               ),
-            ),
 
-            SizedBox(
-              height: 18,
-            ),
-
-            Text("16269",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.red,
-                fontSize: 18,
+              SizedBox(
+                height: 8,
               ),
-            ),
 
-            SizedBox(
-              height: 8,
-            ),
-
-            Text("or send an email to",
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-                color: Colors.black38,
-                fontSize: 18,
+              Text("You are able to call this number",
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black38,
+                  fontSize: 18,
+                ),
               ),
-            ),
 
-            SizedBox(height: 18,),
+              SizedBox(
+                height: 18,
+              ),
 
-            Container(
-              height: 60,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(
-                  width: 2,
+              Text("16269",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
+                  fontSize: 18,
+                ),
+              ),
+
+              SizedBox(
+                height: 8,
+              ),
+
+              Text("or send an email to",
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black38,
+                  fontSize: 18,
+                ),
+              ),
+
+              SizedBox(height: 18,),
+
+              Container(
+                height: 60,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    width: 2,
+                    color: Colors.red,
+                  ),
+                ),
+                child: Center(child: Text("info@onebank.com.bd",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    color: Colors.red,
+                    fontSize: 16,
+                  ),
+                ),
+                ),
+              ),
+
+              SizedBox(height: 18,),
+
+              Container(
+                height: 60,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                  ),
                   color: Colors.red,
                 ),
+                child: Center(child: Text("CALL NOW",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                )),
               ),
-              child: Center(child: Text("info@onebank.com.bd",
-                style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  color: Colors.red,
-                  fontSize: 16,
-                ),
-              ),
-              ),
-            ),
 
-            SizedBox(height: 18,),
-
-            Container(
-              height: 60,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                ),
-                color: Colors.red,
-              ),
-              child: Center(child: Text("CALL NOW",
-                style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  color: Colors.white,
-                  fontSize: 16,
-                ),
-              )),
-            ),
-
-          ],
+            ],
+          ),
         ),
       ),
     );

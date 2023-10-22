@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/account%20type/savings_account_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/bill%20payment/bill_payement_page_screen_3.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/bill%20payment/bill_payment_page_screen_2.dart';
 
 class BillPaymentPageScreen extends StatefulWidget {
   const BillPaymentPageScreen({Key? key}) : super(key: key);
@@ -26,66 +28,69 @@ class _BillPaymentPageScreenState extends State<BillPaymentPageScreen> {
             ),
             color: Colors.white
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
 
-            SizedBox(height: 15,),
+              SizedBox(height: 15,),
 
-            Text("Uitility Bill Dashboard",
-              style: TextStyle(
-                fontWeight: FontWeight.w700,
-                color: Colors.red,
-                fontSize: 25,
+              Text("Uitility Bill Dashboard",
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  color: Colors.red,
+                  fontSize: 25,
+                ),
               ),
-            ),
 
-            SizedBox(
-              height: 18,
-            ),
+              SizedBox(
+                height: 18,
+              ),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ReUseAbleWidget(
-                  onTap: (){
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ReUseAbleWidget(
+                    onTap: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => BillPaymentPageScreen2() ));
+                    },
+                    img: "images/w15.png",
+                    name: "Electricity Bill Payment",
+                  ),
+                  ReUseAbleWidget(
+                    onTap: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => BillPaymentPageScreen3() ));
+                    },
+                    img: "images/w16.png",
+                    name: "Water Bill Payment",
+                  ),
+                ],
+              ),
 
-                  },
-                  img: "images/w5.png",
-                  name: "Electricity Bill Payment",
-                ),
-                ReUseAbleWidget(
-                  onTap: (){
+              SizedBox(height: 5,),
 
-                  },
-                  img: "images/w6.png",
-                  name: "Water Bill Payment",
-                ),
-              ],
-            ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ReUseAbleWidget(
+                    onTap: (){
 
-            SizedBox(height: 5,),
+                    },
+                    img: "images/w17.png",
+                    name: "Bill Report",
+                  ),
+                  ReUseAbleWidget(
+                    onTap: (){
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ReUseAbleWidget(
-                  onTap: (){
-
-                  },
-                  img: "images/w7.png",
-                  name: "Bill Report",
-                ),
-                ReUseAbleWidget(
-                  onTap: (){
-
-                  },
-                  img: "images/w8.png",
-                  name: "Biller List",
-                ),
-              ],
-            ),
-          ],
+                    },
+                    img: "images/w17.png",
+                    name: "Biller List",
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -117,7 +122,7 @@ class ReUseAbleWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.asset(img!),
+            Image.asset(img!,height: 140, width: 140,),
             Text("$name")
           ],
         ),
