@@ -163,7 +163,7 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("OBL Banking"),
+                            Image(image: AssetImage("images/w10.png"),height: 80, width: 80),
                             Text("OBL Banking"),
                           ],
                         ),
@@ -179,7 +179,7 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Fund Transfer"),
+                            Image(image: AssetImage("images/w11.png"),height: 80, width: 80),
                             Text("Fund Transfer"),
                           ],
                         ),
@@ -195,7 +195,7 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Bill Payment"),
+                            Image(image: AssetImage("images/w12.png"),height: 80, width: 80),
                             Text("Bill Payment"),
                           ],
                         ),
@@ -211,7 +211,7 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Airtime"),
+                            Image(image: AssetImage("images/w13.png"),height: 80, width: 80),
                             Text("Airtime"),
                           ],
                         ),
@@ -227,7 +227,7 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Contact OBL"),
+                            Image(image: AssetImage("images/w14.png"),height: 80, width: 80),
                             Text("Contact OBL"),
                           ],
                         ),
