@@ -445,7 +445,7 @@ class _AirTimePageScreenState extends State<AirTimePageScreen> {
                     borderRadius: BorderRadius.circular(25),
                     color: Colors.red,
                   ),
-                  child: Center(child: Text("PROCED",
+                  child: Center(child: Text("PROCEED",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white

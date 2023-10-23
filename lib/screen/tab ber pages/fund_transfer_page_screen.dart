@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/bill_payment_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/fund%20transfer/fund_transfer_page_screen_2.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/fund%20transfer/fund_transfer_page_screen_3.dart';
 
 class FundTransferPageScreen extends StatefulWidget {
   const FundTransferPageScreen({Key? key}) : super(key: key);
@@ -51,22 +53,22 @@ class _FundTransferPageScreenState extends State<FundTransferPageScreen> {
                 children: [
                   ReUseAbleWidget(
                     onTap: (){
-
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>FundTransferPageScreen2()));
                     },
-                    img: "images/w5.png",
+                    img: "images/w20.png",
                     name: "Own Bank",
                   ),
                   ReUseAbleWidget(
                     onTap: (){
-
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>FundTransferPageScreen3()));
                     },
-                    img: "images/w6.png",
+                    img: "images/w21.png",
                     name: "Other Bank",
                   ),
                 ],
               ),
 
-              SizedBox(height: 5,),
+              SizedBox(height: 8,),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -75,24 +77,26 @@ class _FundTransferPageScreenState extends State<FundTransferPageScreen> {
                     onTap: (){
 
                     },
-                    img: "images/w7.png",
+                    img: "images/w23.png",
                     name: "Transfer From Credit Card",
                   ),
                   ReUseAbleWidget(
                     onTap: (){
 
                     },
-                    img: "images/w8.png",
+                    img: "images/w24.png",
                     name: "Sl. Instraction",
                   ),
                 ],
               ),
 
+              SizedBox(height: 8,),
+
               ReUseAbleWidget(
                 onTap: (){
 
                 },
-                img: "images/w9.png",
+                img: "images/w19.png",
                 name: "Fund Transfer History",
               ),
             ],

@@ -124,7 +124,7 @@ class ReUseAbleWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.asset(img!,height: 140, width: 140,),
+            Image.asset(img!,height: 130, width: 120,),
             Text("$name")
           ],
         ),
