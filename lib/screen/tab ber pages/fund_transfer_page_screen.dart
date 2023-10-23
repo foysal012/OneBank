@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/bill_payment_page_screen.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/fund%20transfer/fund_transfer_page_screen_2.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/fund%20transfer/fund_transfer_page_screen_3.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/fund%20transfer/fund_transfer_page_screen_4.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/fund%20transfer/fund_transfer_page_screen_5.dart';
 
 class FundTransferPageScreen extends StatefulWidget {
   const FundTransferPageScreen({Key? key}) : super(key: key);
@@ -75,14 +77,14 @@ class _FundTransferPageScreenState extends State<FundTransferPageScreen> {
                 children: [
                   ReUseAbleWidget(
                     onTap: (){
-
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>FundTransferPageScreen4()));
                     },
                     img: "images/w23.png",
                     name: "Transfer From Credit Card",
                   ),
                   ReUseAbleWidget(
                     onTap: (){
-
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>FundTransferPageScreen5()));
                     },
                     img: "images/w24.png",
                     name: "Sl. Instraction",
