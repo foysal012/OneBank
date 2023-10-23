@@ -325,7 +325,7 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                               topLeft: Radius.circular(40),
                               topRight: Radius.circular(40)
                           ),
-                          child: EmiCalculatorPageScreen()
+                          child: NewAndEventPageScreen()
                       ),
 
                       ClipRRect(
@@ -333,8 +333,9 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                               topLeft: Radius.circular(40),
                               topRight: Radius.circular(40)
                           ),
-                          child: NewAndEventPageScreen()
-                      )
+                          child: EmiCalculatorPageScreen()
+                      ),
+
                     ],
                   )),
 

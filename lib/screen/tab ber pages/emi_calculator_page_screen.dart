@@ -10,9 +10,14 @@ class EmiCalculatorPageScreen extends StatefulWidget {
 }
 
 class _EmiCalculatorPageScreenState extends State<EmiCalculatorPageScreen> {
-  TextEditingController _accountController = TextEditingController();
+  TextEditingController tenurePeriodController = TextEditingController();
 
   List<String> typeData = ["Prepaid", "Postpaid"];
+
+  double _value = 10000;
+  double _value1 = 10;
+
+  var emiResult;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +44,7 @@ class _EmiCalculatorPageScreenState extends State<EmiCalculatorPageScreen> {
 
               SizedBox(height: 10,),
 
-              Text("Mobile Recharge",
+              Text("EMI Calculator",
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
                   color: Colors.red,
@@ -51,13 +56,25 @@ class _EmiCalculatorPageScreenState extends State<EmiCalculatorPageScreen> {
                 height: 10,
               ),
 
+              Text("Tenure Period",
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black54,
+                  fontSize: 18,
+                ),
+              ),
+
+              SizedBox(height: 5,),
+
               TextFormField(
-                controller: _accountController,
+                controller: tenurePeriodController,
                 decoration: InputDecoration(
                   label: Text("Select Account No "),
                   hintText: "654 454 ***",
                   suffixIcon: IconButton(
-                    onPressed: (){},
+                    onPressed: (){
+
+                    },
                     icon: Icon(Icons.arrow_drop_down),
                   ),
                   enabledBorder: OutlineInputBorder(
@@ -83,354 +100,109 @@ class _EmiCalculatorPageScreenState extends State<EmiCalculatorPageScreen> {
                 ),
 
               ),
-              Container(
-                height: 45,
-                padding: EdgeInsets.only(
-                  left: 5,
-                  right: 5,
-                ),
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(10),
-                      bottomRight: Radius.circular(10),
-                    ),
-                    color: Colors.red
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Available Balance",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500
-                      ),
-                    ),
-                    Text("2,46,000",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              SizedBox(height: 10,),
-
-              Row(
-                children: [
-                  Expanded(
-                    flex: 8,
-                    child: TextFormField(
-                      controller: _accountController,
-                      decoration: InputDecoration(
-                        label: Text("Mobile Number "),
-                        hintText: "01746******",
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10),
-                            topRight: Radius.circular(10),
-                            bottomLeft: Radius.circular(10),
-                            bottomRight: Radius.circular(10),
-                          ),
-                          borderSide: BorderSide(
-                              color: Colors.red,
-                              width: 1
-                          ),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10),
-                            topRight: Radius.circular(10),
-                            bottomLeft: Radius.circular(10),
-                            bottomRight: Radius.circular(10),
-                          ),
-                          borderSide: BorderSide(
-                              color: Colors.red,
-                              width: 1
-                          ),
-                        ),
-                      ),
-
-                    ),
-                  ),
-
-                  SizedBox(width: 3,),
-
-                  Expanded(
-                    flex: 2,
-                    child: Container(
-                      height: 62,
-                      width: 62,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          border: Border.all(
-                              width: 1,
-                              color: Colors.red
-                          ),
-                          color: Colors.red[100]
-                      ),
-                      child: Icon(Icons.search, color: Colors.red,size: 30,),
-                    ),
-                  )
-                ],
-              ),
-
-              SizedBox(height: 10,),
-
-              // Row(
-              //   children: [
-              //     Expanded(
-              //       flex: 2,
-              //       child: Column(
-              //         children: [
-              //           Container(
-              //             height: 62,
-              //             width: 62,
-              //             decoration: BoxDecoration(
-              //                 borderRadius: BorderRadius.circular(5),
-              //                 border: Border.all(
-              //                     width: 1,
-              //                     color: Colors.red
-              //                 ),
-              //                 //color: Colors.red[100]
-              //             ),
-              //             child: Image.asset("images/w5.png",height: 50,width: 50),
-              //           ),
-              //           SizedBox(height: 2,),
-              //           Text("GP")
-              //         ],
-              //       ),
-              //     ),
-              //
-              //     SizedBox(width: 3,),
-              //
-              //     Expanded(
-              //       flex: 2,
-              //       child: Column(
-              //         children: [
-              //           Container(
-              //             height: 62,
-              //             width: 62,
-              //             decoration: BoxDecoration(
-              //                 borderRadius: BorderRadius.circular(5),
-              //                 border: Border.all(
-              //                     width: 1,
-              //                     color: Colors.red
-              //                 ),
-              //                 //color: Colors.red[100]
-              //             ),
-              //             child: Image.asset("images/w6.png",height: 60,width: 60),
-              //           ),
-              //           SizedBox(height: 2,),
-              //           Text("Banglalink")
-              //         ],
-              //       ),
-              //     ),
-              //
-              //     SizedBox(width: 3,),
-              //
-              //     Expanded(
-              //       flex: 2,
-              //       child: Column(
-              //         children: [
-              //           Container(
-              //             height: 62,
-              //             width: 62,
-              //             decoration: BoxDecoration(
-              //                 borderRadius: BorderRadius.circular(5),
-              //                 border: Border.all(
-              //                     width: 1,
-              //                     color: Colors.red
-              //                 ),
-              //                 //color: Colors.red[100]
-              //             ),
-              //             child: Image.asset("images/w7.png",height: 50,width: 50),
-              //           ),
-              //           SizedBox(height: 2,),
-              //           Text("Robi")
-              //         ],
-              //       ),
-              //     ),
-              //
-              //     SizedBox(width: 3,),
-              //
-              //     Expanded(
-              //       flex: 2,
-              //       child: Column(
-              //         children: [
-              //           Container(
-              //             height: 62,
-              //             width: 62,
-              //             decoration: BoxDecoration(
-              //                 borderRadius: BorderRadius.circular(5),
-              //                 border: Border.all(
-              //                     width: 1,
-              //                     color: Colors.red
-              //                 ),
-              //                 //color: Colors.red[100]
-              //             ),
-              //             child: Image.asset("images/w8.png",height: 50,width: 50),
-              //           ),
-              //           SizedBox(height: 2,),
-              //           Text("Teletalk")
-              //         ],
-              //       ),
-              //     ),
-              //
-              //     SizedBox(width: 3,),
-              //
-              //     Expanded(
-              //       flex: 2,
-              //       child: Column(
-              //         children: [
-              //           Container(
-              //             height: 62,
-              //             width: 62,
-              //             decoration: BoxDecoration(
-              //                 borderRadius: BorderRadius.circular(5),
-              //                 border: Border.all(
-              //                     width: 1,
-              //                     color: Colors.red
-              //                 ),
-              //                 //color: Colors.red[100]
-              //             ),
-              //             child: Image.asset("images/w9.png",height: 50,width: 50),
-              //           ),
-              //           SizedBox(height: 2,),
-              //           Text("Airtel")
-              //         ],
-              //       ),
-              //     )
-              //   ],
-              // ),
-
-              SelecteOperatorPageScreen(),
 
               SizedBox(height: 20,),
 
-              // Row(
-              //   children: [
-              //     Expanded(
-              //       flex: 5,
-              //       child: Container(
-              //         height: 62,
-              //         width: 62,
-              //         decoration: BoxDecoration(
-              //             borderRadius: BorderRadius.circular(5),
-              //             border: Border.all(
-              //                 width: 1,
-              //                 color: Colors.red
-              //             ),
-              //             color: Colors.red[100]
-              //         ),
-              //         child: Center(child: Text("Prepaid",
-              //           style: TextStyle(
-              //               fontWeight: FontWeight.w500,
-              //               color: Colors.red
-              //           ),
-              //         ),),
-              //       ),
-              //     ),
-              //
-              //     SizedBox(width: 10,),
-              //
-              //     Expanded(
-              //       flex: 5,
-              //       child: Container(
-              //         height: 62,
-              //         width: 62,
-              //         decoration: BoxDecoration(
-              //             borderRadius: BorderRadius.circular(5),
-              //             border: Border.all(
-              //                 width: 1,
-              //                 color: Colors.red
-              //             ),
-              //             color: Colors.red[100]
-              //         ),
-              //         child: Center(child: Text("Postpaid",
-              //           style: TextStyle(
-              //               fontWeight: FontWeight.w500,
-              //               color: Colors.red
-              //           ),
-              //         ),),
-              //       ),
-              //     ),
-              //
-              //   ],
-              // ),
-
-              // ListView.separated(
-              //     shrinkWrap: true,
-              //     scrollDirection: Axis.horizontal,
-              //     itemCount: typeData.length,
-              //     separatorBuilder: (_,index){
-              //       return Padding(padding: EdgeInsets.only(right: 10));
-              //     },
-              //     itemBuilder: (context, index){
-              //       return Container(
-              //         height: 62,
-              //         width: 62,
-              //         decoration: BoxDecoration(
-              //             borderRadius: BorderRadius.circular(5),
-              //             border: Border.all(
-              //                 width: 1,
-              //                 color: Colors.red
-              //             ),
-              //             color: Colors.red[100]
-              //         ),
-              //         child: Center(child: Text("${typeData[index]}",
-              //           style: TextStyle(
-              //               fontWeight: FontWeight.w500,
-              //               color: Colors.red
-              //           ),
-              //         ),),
-              //       );
-              //
-              //     }),
-              SelectTagePageScreen(),
-
-              SizedBox(height: 10,),
-
-              TextFormField(
-                controller: _accountController,
-                decoration: InputDecoration(
-                  label: Text("Amount "),
-                  hintText: "20 / 50 / 100 / ***",
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      topRight: Radius.circular(10),
-                      bottomLeft: Radius.circular(10),
-                      bottomRight: Radius.circular(10),
-                    ),
-                    borderSide: BorderSide(
-                        color: Colors.red,
-                        width: 1
-                    ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      topRight: Radius.circular(10),
-                      bottomLeft: Radius.circular(10),
-                      bottomRight: Radius.circular(10),
-                    ),
-                    borderSide: BorderSide(
-                        color: Colors.red,
-                        width: 1
-                    ),
-                  ),
+              Text("Loan Amount",
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black54,
+                  fontSize: 18,
                 ),
-
               ),
 
-              SizedBox(height: 10,),
+              SizedBox(height: 5,),
+
+              Slider(
+                min: 0,
+                  max: 250000,
+                  value: _value,
+                  activeColor: Colors.red,
+                  thumbColor: Colors.white,
+                  overlayColor: MaterialStatePropertyAll(Colors.red),
+                  label: _value.round().toString(),
+                  divisions: 10,
+
+                  onChanged: (value){
+                  setState(() {
+                    _value = value;
+                    print(_value);
+                  });
+                  }
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("0৳"),
+                  Text("250000৳"),
+                ],
+              ),
+
+              SizedBox(height: 20,),
+
+              Text("Interest Rate",
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black54,
+                  fontSize: 18,
+                ),
+              ),
+
+              SizedBox(height: 5,),
+
+              Slider(
+                min: 10,
+                  max: 15,
+                  activeColor: Colors.red,
+                  thumbColor: Colors.white,
+                  overlayColor: MaterialStatePropertyAll(Colors.red),
+                  label: _value1.round().toString(),
+                  divisions: 6,
+                  value: _value1,
+                  onChanged: (val){
+                    setState(() {
+                      _value1 = val;
+                      print(_value1);
+                    });
+                  }
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("10%"),
+                  Text("15%"),
+                ],
+              ),
+              SizedBox(height: 20,),
+
+
 
               InkWell(
                 onTap: (){
                   //Navigator.of(context).push(MaterialPageRoute(builder: (context) => SavingAccountpageScreen()));
+                  // if(_value1.toInt() == 10){
+                  //    emiResult = _value * 0.10;
+                  //   print(emiResult);
+                  // } else if(_value1 == 11){
+                  //   emiResult = _value * 0.11;
+                  //   print(emiResult);
+                  // }else if(_value1 == 12){
+                  //   emiResult = _value * 0.12;
+                  //   print(emiResult);
+                  // }else if(_value1 == 13){
+                  //   emiResult = _value * 0.13;
+                  //   print(emiResult);
+                  // }else if(_value1 == 14){
+                  //   emiResult = _value * 0.14;
+                  //   print(emiResult);
+                  // }else {
+                  //   emiResult = _value * 0.15;
+                  //   print(emiResult);
+                  // }
+                  emiResult = _value * (_value1/100);
+                  print(emiResult);
                 },
                 child: Container(
                   height: 55,
@@ -443,7 +215,7 @@ class _EmiCalculatorPageScreenState extends State<EmiCalculatorPageScreen> {
                     borderRadius: BorderRadius.circular(25),
                     color: Colors.red,
                   ),
-                  child: Center(child: Text("PROCED",
+                  child: Center(child: Text("Calculate EMI",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.white

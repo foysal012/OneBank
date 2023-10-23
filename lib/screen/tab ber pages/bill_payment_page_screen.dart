@@ -33,7 +33,7 @@ class _BillPaymentPageScreenState extends State<BillPaymentPageScreen> {
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
 
               SizedBox(height: 15,),

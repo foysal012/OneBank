@@ -12,7 +12,9 @@ class AirTimePageScreen extends StatefulWidget {
 
 class _AirTimePageScreenState extends State<AirTimePageScreen> {
 
-  TextEditingController _accountController = TextEditingController();
+  TextEditingController accountController = TextEditingController();
+  TextEditingController mobileNumberController = TextEditingController();
+  TextEditingController amountController = TextEditingController();
 
   List<String> typeData = ["Prepaid", "Postpaid"];
 
@@ -54,7 +56,7 @@ class _AirTimePageScreenState extends State<AirTimePageScreen> {
               ),
 
               TextFormField(
-                controller: _accountController,
+                controller: accountController,
                 decoration: InputDecoration(
                   label: Text("Select Account No "),
                   hintText: "654 454 ***",
@@ -125,7 +127,7 @@ class _AirTimePageScreenState extends State<AirTimePageScreen> {
                   Expanded(
                     flex: 8,
                     child: TextFormField(
-                      controller: _accountController,
+                      controller: mobileNumberController,
                       decoration: InputDecoration(
                         label: Text("Mobile Number "),
                         hintText: "01746******",
@@ -396,7 +398,7 @@ class _AirTimePageScreenState extends State<AirTimePageScreen> {
               SizedBox(height: 10,),
 
               TextFormField(
-                controller: _accountController,
+                controller: amountController,
                 decoration: InputDecoration(
                   label: Text("Amount "),
                   hintText: "20 / 50 / 100 / ***",
