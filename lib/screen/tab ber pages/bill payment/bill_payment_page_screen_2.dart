@@ -140,13 +140,21 @@ class _BillPaymentPageScreen2State extends State<BillPaymentPageScreen2> {
                     },
                     itemBuilder: (BuildContext context){
                       return <PopupMenuEntry<billerType>>[
-                        PopupMenuItem(
+                        PopupMenuItem<billerType>(
                             child: Text("DESKO Prepaid"),
                           value: billerType.DESKO_Prepaid,
                         ),
                         PopupMenuItem<billerType>(
                           child: Text("DESKO Postpaid"),
                           value: billerType.DESKO_Postpaid,
+                        ),
+                        PopupMenuItem<billerType>(
+                            child: Text("DPDC Prepaid"),
+                          value: billerType.DPDC_Prepaid,
+                        ),
+                        PopupMenuItem<billerType>(
+                          child: Text("DPDC Postpaid"),
+                          value: billerType.DPDC_Postpaid,
                         ),
                         PopupMenuItem<billerType>(
                           child: Text("NESKO Prepaid"),
@@ -165,6 +173,8 @@ class _BillPaymentPageScreen2State extends State<BillPaymentPageScreen2> {
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10),
+                      bottomLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
                     ),
                     borderSide: BorderSide(
                         color: Colors.red,
@@ -175,6 +185,8 @@ class _BillPaymentPageScreen2State extends State<BillPaymentPageScreen2> {
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10),
+                      bottomLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
                     ),
                     borderSide: BorderSide(
                         color: Colors.red,
@@ -186,7 +198,7 @@ class _BillPaymentPageScreen2State extends State<BillPaymentPageScreen2> {
               ),
 
               SizedBox(
-                height: 20,
+                height: 23,
               ),
 
                   TextFormField(
@@ -214,12 +226,14 @@ class _BillPaymentPageScreen2State extends State<BillPaymentPageScreen2> {
                             });
                           }
                         },
-                        icon: Icon(Icons.arrow_drop_down),
+                        icon: Icon(Icons.calendar_month),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(10),
                           topRight: Radius.circular(10),
+                          bottomLeft: Radius.circular(10),
+                          bottomRight: Radius.circular(10),
                         ),
                         borderSide: BorderSide(
                             color: Colors.red,
@@ -230,6 +244,8 @@ class _BillPaymentPageScreen2State extends State<BillPaymentPageScreen2> {
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(10),
                           topRight: Radius.circular(10),
+                          bottomLeft: Radius.circular(10),
+                          bottomRight: Radius.circular(10),
                         ),
                         borderSide: BorderSide(
                             color: Colors.red,
@@ -282,7 +298,7 @@ class _BillPaymentPageScreen2State extends State<BillPaymentPageScreen2> {
                     ),
                   ),
 
-                  SizedBox(width: 3,),
+                  SizedBox(width: 5,),
 
                   Expanded(
                     flex: 2,
@@ -340,6 +356,8 @@ class _BillPaymentPageScreen2State extends State<BillPaymentPageScreen2> {
 enum  billerType {
   DESKO_Prepaid,
   DESKO_Postpaid,
+  DPDC_Prepaid,
+  DPDC_Postpaid,
   NESKO_Prepaid,
   NESKO_Postpaid,
 }

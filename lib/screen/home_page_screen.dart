@@ -3,7 +3,9 @@ import 'package:onebankltd/screen/drawer/drawer_page_screen.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/air_time_page_screen.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/bill_payment_page_screen.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/contact_obl_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/emi_calculator_page_screen.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/fund_transfer_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/news_and_event_page_screen.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/obl_banking_page_screen.dart';
 
 class HomePageScreen extends StatefulWidget {
@@ -25,7 +27,7 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
   @override
   void initState() {
     // TODO: implement initState
-    _tabController = TabController(length: 5, vsync: this);
+    _tabController = TabController(length: 7, vsync: this);
     super.initState();
   }
 
@@ -231,7 +233,39 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                             Text("Contact OBL"),
                           ],
                         ),
-                      )
+                      ),
+
+                      Container(
+                        height: 100,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color:  Colors.white,
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image(image: AssetImage("images/w19.png"),height: 80, width: 80),
+                            Text("News,Event"),
+                          ],
+                        ),
+                      ),
+
+                      Container(
+                        height: 100,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color:  Colors.white,
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image(image: AssetImage("images/w18.png"),height: 80, width: 80),
+                            Text("EMI Calculator"),
+                          ],
+                        ),
+                      ),
                     ],
 
                   ),
@@ -284,6 +318,22 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                               topRight: Radius.circular(40)
                           ),
                           child: ContactOblPageScreen()
+                      ),
+
+                      ClipRRect(
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(40),
+                              topRight: Radius.circular(40)
+                          ),
+                          child: EmiCalculatorPageScreen()
+                      ),
+
+                      ClipRRect(
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(40),
+                              topRight: Radius.circular(40)
+                          ),
+                          child: NewAndEventPageScreen()
                       )
                     ],
                   )),

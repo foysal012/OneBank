@@ -131,7 +131,7 @@ class _BillPaymentPageScreen3State extends State<BillPaymentPageScreen3> {
                   label: Text("Bill Type"),
                   hintText: "DESCO Postpaid",
                   suffixIcon: PopupMenuButton(
-                    initialValue: billerType.DESKO_Prepaid,
+                    initialValue: billerType.Dhaka_Wasa,
                     onSelected: (billerType value){
                       setState(() {
                         //billController = valu.toString() as TextEditingController;
@@ -140,21 +140,37 @@ class _BillPaymentPageScreen3State extends State<BillPaymentPageScreen3> {
                     },
                     itemBuilder: (BuildContext context){
                       return <PopupMenuEntry<billerType>>[
-                        PopupMenuItem(
-                          child: Text("DESKO Prepaid"),
-                          value: billerType.DESKO_Prepaid,
+                        PopupMenuItem<billerType>(
+                          child: Text("Dhaka Wasa"),
+                          value: billerType.Dhaka_Wasa,
                         ),
                         PopupMenuItem<billerType>(
-                          child: Text("DESKO Postpaid"),
-                          value: billerType.DESKO_Postpaid,
+                          child: Text("Khulna Wasa"),
+                          value: billerType.Khulna_Wasa,
                         ),
                         PopupMenuItem<billerType>(
-                          child: Text("NESKO Prepaid"),
-                          value: billerType.NESKO_Prepaid,
+                          child: Text("Rajshahi Wasa"),
+                          value: billerType.Rajshahi_Wasa,
                         ),
                         PopupMenuItem<billerType>(
-                          child: Text("DESKO Postpaid"),
-                          value: billerType.NESKO_Postpaid,
+                          child: Text("Rangpur Wasa"),
+                          value: billerType.Rangpur_Wasa,
+                        ),
+                        PopupMenuItem<billerType>(
+                          child: Text("Mymanshing Wasa"),
+                          value: billerType.Mymansing_Wasa,
+                        ),
+                        PopupMenuItem<billerType>(
+                          child: Text("Shylet Wasa"),
+                          value: billerType.Shylet_Wasa,
+                        ),
+                        PopupMenuItem<billerType>(
+                          child: Text("Chattagram Wasa"),
+                          value: billerType.Chattagram_Wasa,
+                        ),
+                        PopupMenuItem<billerType>(
+                          child: Text("Barishal Wasa"),
+                          value: billerType.Barishal_Wasa,
                         ),
                       ];
                     },
@@ -165,6 +181,8 @@ class _BillPaymentPageScreen3State extends State<BillPaymentPageScreen3> {
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10),
+                      bottomLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
                     ),
                     borderSide: BorderSide(
                         color: Colors.red,
@@ -175,6 +193,8 @@ class _BillPaymentPageScreen3State extends State<BillPaymentPageScreen3> {
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10),
+                      bottomLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
                     ),
                     borderSide: BorderSide(
                         color: Colors.red,
@@ -186,7 +206,7 @@ class _BillPaymentPageScreen3State extends State<BillPaymentPageScreen3> {
               ),
 
               SizedBox(
-                height: 20,
+                height: 23,
               ),
 
               TextFormField(
@@ -214,12 +234,14 @@ class _BillPaymentPageScreen3State extends State<BillPaymentPageScreen3> {
                         });
                       }
                     },
-                    icon: Icon(Icons.arrow_drop_down),
+                    icon: Icon(Icons.calendar_month),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10),
+                      bottomLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
                     ),
                     borderSide: BorderSide(
                         color: Colors.red,
@@ -230,6 +252,8 @@ class _BillPaymentPageScreen3State extends State<BillPaymentPageScreen3> {
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10),
+                      bottomLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
                     ),
                     borderSide: BorderSide(
                         color: Colors.red,
@@ -282,7 +306,7 @@ class _BillPaymentPageScreen3State extends State<BillPaymentPageScreen3> {
                     ),
                   ),
 
-                  SizedBox(width: 3,),
+                  SizedBox(width: 5,),
 
                   Expanded(
                     flex: 2,
@@ -338,9 +362,13 @@ class _BillPaymentPageScreen3State extends State<BillPaymentPageScreen3> {
 }
 
 enum  billerType {
-  DESKO_Prepaid,
-  DESKO_Postpaid,
-  NESKO_Prepaid,
-  NESKO_Postpaid,
+  Dhaka_Wasa,
+  Khulna_Wasa,
+  Rajshahi_Wasa,
+  Rangpur_Wasa,
+  Mymansing_Wasa,
+  Shylet_Wasa,
+  Chattagram_Wasa,
+  Barishal_Wasa,
 }
 

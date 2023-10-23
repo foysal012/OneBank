@@ -49,37 +49,5 @@ class _SelectTagePageScreenState extends State<SelectTagePageScreen> {
           );
           }),
     );
-    //   Expanded(
-    //   flex: 1,
-    // child: ListView.separated(
-    //   shrinkWrap: true,
-    //     scrollDirection: Axis.horizontal,
-    //     itemBuilder: (context, index){
-    //       return  Container(
-    //         height: 62,
-    //         width: 62,
-    //         decoration: BoxDecoration(
-    //             borderRadius: BorderRadius.circular(5),
-    //             border: Border.all(
-    //                 width: 1,
-    //                 color: Colors.red
-    //             ),
-    //             color: Colors.red[100]
-    //         ),
-    //         child: Center(child: Text("${typeData[index]}",
-    //           style: TextStyle(
-    //               fontWeight: FontWeight.w500,
-    //               color: Colors.red
-    //           ),
-    //         ),),
-    //       );
-    //     },
-    //     separatorBuilder: (_, index){
-    //       return SizedBox(width: 10,);
-    //     },
-    //     itemCount: typeData.length,
-    // )
-    //
-    // );
   }
 }

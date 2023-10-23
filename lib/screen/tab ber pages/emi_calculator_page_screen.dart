@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:onebankltd/screen/tab%20ber%20pages/account%20type/savings_account_page_screen.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/air%20time/select_operator_page_screen.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/air%20time/select_tag_page_screen.dart';
 
-class AirTimePageScreen extends StatefulWidget {
-  const AirTimePageScreen({Key? key}) : super(key: key);
+class EmiCalculatorPageScreen extends StatefulWidget {
+  const EmiCalculatorPageScreen({Key? key}) : super(key: key);
 
   @override
-  State<AirTimePageScreen> createState() => _AirTimePageScreenState();
+  State<EmiCalculatorPageScreen> createState() => _EmiCalculatorPageScreenState();
 }
 
-class _AirTimePageScreenState extends State<AirTimePageScreen> {
-
+class _EmiCalculatorPageScreenState extends State<EmiCalculatorPageScreen> {
   TextEditingController _accountController = TextEditingController();
 
   List<String> typeData = ["Prepaid", "Postpaid"];
@@ -63,15 +61,15 @@ class _AirTimePageScreenState extends State<AirTimePageScreen> {
                     icon: Icon(Icons.arrow_drop_down),
                   ),
                   enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    topRight: Radius.circular(10),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(10),
+                    ),
+                    borderSide: BorderSide(
+                        color: Colors.red,
+                        width: 1
+                    ),
                   ),
-                  borderSide: BorderSide(
-                      color: Colors.red,
-                      width: 1
-                  ),
-                ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10),
@@ -93,25 +91,25 @@ class _AirTimePageScreenState extends State<AirTimePageScreen> {
                 ),
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(10),
-                    bottomRight: Radius.circular(10),
-                  ),
-                  color: Colors.red
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                    ),
+                    color: Colors.red
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Available Balance",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500
-                    ),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500
+                      ),
                     ),
                     Text("2,46,000",
                       style: TextStyle(
                           color: Colors.white,
-                        fontWeight: FontWeight.w500
+                          fontWeight: FontWeight.w500
                       ),
                     ),
                   ],
@@ -166,12 +164,12 @@ class _AirTimePageScreenState extends State<AirTimePageScreen> {
                       height: 62,
                       width: 62,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        border: Border.all(
-                          width: 1,
-                          color: Colors.red
-                        ),
-                        color: Colors.red[100]
+                          borderRadius: BorderRadius.circular(5),
+                          border: Border.all(
+                              width: 1,
+                              color: Colors.red
+                          ),
+                          color: Colors.red[100]
                       ),
                       child: Icon(Icons.search, color: Colors.red,size: 30,),
                     ),
@@ -446,10 +444,10 @@ class _AirTimePageScreenState extends State<AirTimePageScreen> {
                     color: Colors.red,
                   ),
                   child: Center(child: Text("PROCED",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white
-                  ),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white
+                    ),
                   ),),
                 ),
               ),

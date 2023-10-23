@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/account%20type/savings_account_page_screen.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/bill%20payment/bill_payement_page_screen_3.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/bill%20payment/bill_payment_page_screen_2.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/bill%20payment/bill_payment_page_screen_4.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/bill%20payment/bill_payment_page_screen_5.dart';
 
 class BillPaymentPageScreen extends StatefulWidget {
   const BillPaymentPageScreen({Key? key}) : super(key: key);
@@ -75,14 +77,14 @@ class _BillPaymentPageScreenState extends State<BillPaymentPageScreen> {
                 children: [
                   ReUseAbleWidget(
                     onTap: (){
-
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => BillPaymentPageScreen4() ));
                     },
                     img: "images/w17.png",
                     name: "Bill Report",
                   ),
                   ReUseAbleWidget(
                     onTap: (){
-
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => BillPaymentPageScreen5() ));
                     },
                     img: "images/w17.png",
                     name: "Biller List",
