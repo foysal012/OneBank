@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/bill%20payment/select_time_category_page_screen.dart';
 
-class BillPaymentPageScreen4 extends StatefulWidget {
-  const BillPaymentPageScreen4({Key? key}) : super(key: key);
+class FundTransferPageScreen6 extends StatefulWidget {
+  const FundTransferPageScreen6({Key? key}) : super(key: key);
 
   @override
-  State<BillPaymentPageScreen4> createState() => _BillPaymentPageScreen4State();
+  State<FundTransferPageScreen6> createState() => _FundTransferPageScreen6State();
 }
 
-class _BillPaymentPageScreen4State extends State<BillPaymentPageScreen4> {
+class _FundTransferPageScreen6State extends State<FundTransferPageScreen6> {
 
   TextEditingController accountController = TextEditingController();
   TextEditingController billController = TextEditingController();
@@ -32,7 +32,7 @@ class _BillPaymentPageScreen4State extends State<BillPaymentPageScreen4> {
         ),
 
         centerTitle: true,
-        title: Text("Utility Bills Report",
+        title: Text("Fund Transfer History",
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -59,12 +59,51 @@ class _BillPaymentPageScreen4State extends State<BillPaymentPageScreen4> {
               SizedBox(height: 10,),
 
               TextFormField(
+                controller: accountController,
+                decoration: InputDecoration(
+                  label: Text("Select Account No "),
+                  hintText: "654 454 ***",
+                  suffixIcon: IconButton(
+                    onPressed: (){},
+                    icon: Icon(Icons.arrow_drop_down),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(10),
+                      bottomLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                    ),
+                    borderSide: BorderSide(
+                        color: Colors.red,
+                        width: 1
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(10),
+                      bottomLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                    ),
+                    borderSide: BorderSide(
+                        color: Colors.red,
+                        width: 1
+                    ),
+                  ),
+                ),
+
+              ),
+
+              SizedBox(height: 20,),
+
+              TextFormField(
                 controller: billController,
                 decoration: InputDecoration(
                   label: Text("Bill Type"),
                   hintText: "DESCO Postpaid",
                   suffixIcon: PopupMenuButton(
-                    initialValue: billerType.DESKO_Prepaid,
+                    initialValue: billerType.Own_Bank_Transfer,
                     onSelected: (billerType value){
                       setState(() {
                         billController.text = value.name as String;
@@ -73,61 +112,22 @@ class _BillPaymentPageScreen4State extends State<BillPaymentPageScreen4> {
                     itemBuilder: (BuildContext context){
                       return <PopupMenuEntry<billerType>>[
                         PopupMenuItem<billerType>(
-                          child: Text("DESKO Prepaid"),
-                          value: billerType.DESKO_Prepaid,
+                          child: Text("Own_Bank_Transfer"),
+                          value: billerType.Own_Bank_Transfer,
                         ),
                         PopupMenuItem<billerType>(
-                          child: Text("DESKO Postpaid"),
-                          value: billerType.DESKO_Postpaid,
+                          child: Text("Other_Bank_Transfer"),
+                          value: billerType.Other_Bank_Transfer,
                         ),
                         PopupMenuItem<billerType>(
-                          child: Text("DPDC Prepaid"),
-                          value: billerType.DPDC_Prepaid,
+                          child: Text("Credit_Card_Trasnfer"),
+                          value: billerType.Credit_Card_Trasnfer,
                         ),
                         PopupMenuItem<billerType>(
-                          child: Text("DPDC Postpaid"),
-                          value: billerType.DPDC_Postpaid,
+                          child: Text("St_Instruction_Transfer"),
+                          value: billerType.St_Instruction_Transfer,
                         ),
-                        PopupMenuItem<billerType>(
-                          child: Text("NESKO Prepaid"),
-                          value: billerType.NESKO_Prepaid,
-                        ),
-                        PopupMenuItem<billerType>(
-                          child: Text("DESKO Postpaid"),
-                          value: billerType.NESKO_Postpaid,
-                        ),
-                        PopupMenuItem<billerType>(
-                          child: Text("Dhaka Wasa"),
-                          value: billerType.Dhaka_Wasa,
-                        ),
-                        PopupMenuItem<billerType>(
-                          child: Text("Khulna Wasa"),
-                          value: billerType.Khulna_Wasa,
-                        ),
-                        PopupMenuItem<billerType>(
-                          child: Text("Rajshahi Wasa"),
-                          value: billerType.Rajshahi_Wasa,
-                        ),
-                        PopupMenuItem<billerType>(
-                          child: Text("Rangpur Wasa"),
-                          value: billerType.Rangpur_Wasa,
-                        ),
-                        PopupMenuItem<billerType>(
-                          child: Text("Mymanshing Wasa"),
-                          value: billerType.Mymansing_Wasa,
-                        ),
-                        PopupMenuItem<billerType>(
-                          child: Text("Shylet Wasa"),
-                          value: billerType.Shylet_Wasa,
-                        ),
-                        PopupMenuItem<billerType>(
-                          child: Text("Chattagram Wasa"),
-                          value: billerType.Chattagram_Wasa,
-                        ),
-                        PopupMenuItem<billerType>(
-                          child: Text("Barishal Wasa"),
-                          value: billerType.Barishal_Wasa,
-                        ),
+
                       ];
                     },
                     icon: Icon(Icons.arrow_drop_down),
@@ -334,7 +334,7 @@ class _BillPaymentPageScreen4State extends State<BillPaymentPageScreen4> {
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
-                      fontSize: 18
+                        fontSize: 18
                     ),
                   ),),
                 ),
@@ -349,18 +349,8 @@ class _BillPaymentPageScreen4State extends State<BillPaymentPageScreen4> {
 }
 
 enum  billerType {
-  DESKO_Prepaid,
-  DESKO_Postpaid,
-  DPDC_Prepaid,
-  DPDC_Postpaid,
-  NESKO_Prepaid,
-  NESKO_Postpaid,
-  Dhaka_Wasa,
-  Khulna_Wasa,
-  Rajshahi_Wasa,
-  Rangpur_Wasa,
-  Mymansing_Wasa,
-  Shylet_Wasa,
-  Chattagram_Wasa,
-  Barishal_Wasa,
+  Own_Bank_Transfer,
+  Other_Bank_Transfer,
+  Credit_Card_Trasnfer,
+  St_Instruction_Transfer,
 }

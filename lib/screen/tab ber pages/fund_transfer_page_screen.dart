@@ -4,6 +4,7 @@ import 'package:onebankltd/screen/tab%20ber%20pages/fund%20transfer/fund_transfe
 import 'package:onebankltd/screen/tab%20ber%20pages/fund%20transfer/fund_transfer_page_screen_3.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/fund%20transfer/fund_transfer_page_screen_4.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/fund%20transfer/fund_transfer_page_screen_5.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/fund%20transfer/fund_transfer_page_screen_6.dart';
 
 class FundTransferPageScreen extends StatefulWidget {
   const FundTransferPageScreen({Key? key}) : super(key: key);
@@ -96,7 +97,7 @@ class _FundTransferPageScreenState extends State<FundTransferPageScreen> {
 
               ReUseAbleWidget(
                 onTap: (){
-
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>FundTransferPageScreen6()));
                 },
                 img: "images/w19.png",
                 name: "Fund Transfer History",
