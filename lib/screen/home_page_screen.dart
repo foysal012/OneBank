@@ -5,7 +5,7 @@ import 'package:onebankltd/screen/tab%20ber%20pages/bill_payment_page_screen.dar
 import 'package:onebankltd/screen/tab%20ber%20pages/contact_obl_page_screen.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/emi_calculator_page_screen.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/fund_transfer_page_screen.dart';
-import 'package:onebankltd/screen/tab%20ber%20pages/news_and_event_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/obl_branch_page_screen.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/obl_banking_page_screen.dart';
 
 class HomePageScreen extends StatefulWidget {
@@ -246,7 +246,7 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Image(image: AssetImage("images/w19.png"),height: 80, width: 80),
-                            Text("News,Event"),
+                            Text("OBL Branch"),
                           ],
                         ),
                       ),
@@ -325,7 +325,7 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                               topLeft: Radius.circular(40),
                               topRight: Radius.circular(40)
                           ),
-                          child: NewAndEventPageScreen()
+                          child: OblBranchPageScreen()
                       ),
 
                       ClipRRect(
