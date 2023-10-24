@@ -134,7 +134,7 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
         color: Colors.grey,
         child: Column(
           children: [
-            SizedBox(height: 10,),
+           //SizedBox(height: 10,),
 
             Expanded(
                 flex: 2,
@@ -156,7 +156,7 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                     },
                     tabs: [
                       Container(
-                        height: 100,
+                        height: 80,
                         width: 100,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
@@ -165,14 +165,14 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image(image: AssetImage("images/w10.png"),height: 80, width: 80),
+                            Image(image: AssetImage("images/w10.png"),height: 60, width: 80),
                             Text("OBL Banking"),
                           ],
                         ),
                       ),
 
                       Container(
-                        height: 100,
+                        height: 80,
                         width: 100,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
@@ -181,14 +181,14 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image(image: AssetImage("images/w11.png"),height: 80, width: 80),
+                            Image(image: AssetImage("images/w11.png"),height: 60, width: 80),
                             Text("Fund Transfer"),
                           ],
                         ),
                       ),
 
                       Container(
-                        height: 100,
+                        height: 80,
                         width: 100,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
@@ -197,14 +197,14 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image(image: AssetImage("images/w12.png"),height: 80, width: 80),
+                            Image(image: AssetImage("images/w12.png"),height: 60, width: 80),
                             Text("Bill Payment"),
                           ],
                         ),
                       ),
 
                       Container(
-                        height: 100,
+                        height: 80,
                         width: 100,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
@@ -213,14 +213,14 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image(image: AssetImage("images/w13.png"),height: 80, width: 80),
+                            Image(image: AssetImage("images/w13.png"),height: 60, width: 80),
                             Text("Airtime"),
                           ],
                         ),
                       ),
 
                       Container(
-                        height: 100,
+                        height: 80,
                         width: 100,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
@@ -229,14 +229,14 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image(image: AssetImage("images/w14.png"),height: 80, width: 80),
+                            Image(image: AssetImage("images/w14.png"),height: 60, width: 80),
                             Text("Contact OBL"),
                           ],
                         ),
                       ),
 
                       Container(
-                        height: 100,
+                        height: 80,
                         width: 100,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
@@ -245,14 +245,14 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image(image: AssetImage("images/w19.png"),height: 80, width: 80),
+                            Image(image: AssetImage("images/w19.png"),height: 60, width: 80),
                             Text("OBL Branch"),
                           ],
                         ),
                       ),
 
                       Container(
-                        height: 100,
+                        height: 80,
                         width: 100,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
@@ -261,7 +261,7 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image(image: AssetImage("images/w18.png"),height: 80, width: 80),
+                            Image(image: AssetImage("images/w18.png"),height: 60, width: 80),
                             Text("EMI Calculator"),
                           ],
                         ),
@@ -272,7 +272,7 @@ class _HomePageScreenState extends State<HomePageScreen> with SingleTickerProvid
                 )
             ),
 
-            SizedBox(height: 20,),
+            SizedBox(height: 3,),
 
 
               Expanded(
