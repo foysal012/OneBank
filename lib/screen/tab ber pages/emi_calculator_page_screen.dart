@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/air%20time/select_operator_page_screen.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/air%20time/select_tag_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/emi%20calculator/emi_calculator_page_screen_2.dart';
 
 class EmiCalculatorPageScreen extends StatefulWidget {
   const EmiCalculatorPageScreen({Key? key}) : super(key: key);
@@ -181,28 +182,15 @@ class _EmiCalculatorPageScreenState extends State<EmiCalculatorPageScreen> {
 
               InkWell(
                 onTap: (){
-                  //Navigator.of(context).push(MaterialPageRoute(builder: (context) => SavingAccountpageScreen()));
-                  // if(_value1.toInt() == 10){
-                  //    emiResult = _value * 0.10;
-                  //   print(emiResult);
-                  // } else if(_value1 == 11){
-                  //   emiResult = _value * 0.11;
-                  //   print(emiResult);
-                  // }else if(_value1 == 12){
-                  //   emiResult = _value * 0.12;
-                  //   print(emiResult);
-                  // }else if(_value1 == 13){
-                  //   emiResult = _value * 0.13;
-                  //   print(emiResult);
-                  // }else if(_value1 == 14){
-                  //   emiResult = _value * 0.14;
-                  //   print(emiResult);
-                  // }else {
-                  //   emiResult = _value * 0.15;
-                  //   print(emiResult);
-                  // }
+
                   emiResult = _value * (_value1/100);
                   print(emiResult);
+
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=> EmiCalculatorPageScreen2(
+                    totalEmi: emiResult,
+                    loanAmount: _value.toInt(),
+                    timePeriod: int.parse(tenurePeriodController.text),
+                  )));
                 },
                 child: Container(
                   height: 55,
