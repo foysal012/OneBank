@@ -70,10 +70,10 @@ class _OblBranchPageScreenState extends State<OblBranchPageScreen> {
                 decoration: InputDecoration(
                   label: Text("All Branch"),
                   hintText: "Dhaka",
-                  suffixIcon: IconButton(
-                    onPressed: (){},
-                    icon: Icon(Icons.arrow_drop_down),
-                  ),
+                  // suffixIcon: IconButton(
+                  //   onPressed: (){},
+                  //   icon: Icon(Icons.arrow_drop_down),
+                  // ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10),

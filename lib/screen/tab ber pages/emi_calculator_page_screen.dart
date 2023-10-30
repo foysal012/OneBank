@@ -70,8 +70,8 @@ class _EmiCalculatorPageScreenState extends State<EmiCalculatorPageScreen> {
               TextFormField(
                 controller: tenurePeriodController,
                 decoration: InputDecoration(
-                  label: Text("Select Account No "),
-                  hintText: "654 454 ***",
+                  label: Text("Select a time period "),
+                  hintText: "5",
                   suffixIcon: IconButton(
                     onPressed: (){
 
