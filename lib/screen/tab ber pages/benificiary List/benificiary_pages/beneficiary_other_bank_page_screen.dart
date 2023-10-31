@@ -73,7 +73,7 @@ class _BeneficiaryOtherBankPageScreenState extends State<BeneficiaryOtherBankPag
                                 left: 20,
                                 right: 20,
                               ),
-                              height: 130,
+                              height: 150,
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),

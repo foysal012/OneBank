@@ -17,8 +17,10 @@ void main() async{
 
   await Hive.initFlutter();
    Hive.registerAdapter(UserModelOwnBankAdapter());
-  var box = Hive.openBox("ownbank");
-  var box1 = Hive.openBox("otherbank");
+  var box = await Hive.openBox("ownbank");
+
+  Hive.registerAdapter(UserModelOtherBankAdapter());
+  var box1 = await Hive.openBox("otherbank");
 
   runApp(const MyApp());
 }

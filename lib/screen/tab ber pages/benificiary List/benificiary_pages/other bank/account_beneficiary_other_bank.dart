@@ -87,7 +87,7 @@ class _AccountBeneficiaryOtherBankState extends State<AccountBeneficiaryOtherBan
 
               ButtonWidget(
                 onTap: (){
-                  if(accNoController.text != null && accTitleController.text != null && nickNameController.text != null || mobileNoController.text != null || emailadController.text != null ){
+                  if(bankNameController.text != null && branchNameController.text != null && accNoController.text != null && accTitleController.text != null && nickNameController.text != null || mobileNoController.text != null || emailadController.text != null ){
 
                      UserModelOtherBank userModelOtherBank = UserModelOtherBank(
                         bankName: bankNameController.text,
