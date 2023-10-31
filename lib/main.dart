@@ -22,6 +22,9 @@ void main() async{
   Hive.registerAdapter(UserModelOtherBankAdapter());
   var box1 = await Hive.openBox("otherbank");
 
+  Hive.registerAdapter(UserModelMFSAdapter());
+  var box2 = await Hive.openBox("mfs");
+
   runApp(const MyApp());
 }
 
@@ -38,9 +41,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      //home: SignUpPageScreen(),
+      home: SignUpPageScreen(),
       //home: BottomNavigationbarPageScreen(),
-       home: BeneficiaryMainListPage(),
+       //home: BeneficiaryMainListPage(),
     );
   }
 }

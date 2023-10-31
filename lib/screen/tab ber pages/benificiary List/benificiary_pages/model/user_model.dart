@@ -58,7 +58,7 @@ class UserModelOtherBank extends HiveObject{
 }
 
 @HiveType(typeId: 2)
-class UserModelMFS{
+class UserModelMFS extends HiveObject{
   @HiveField(0)
   String? mfsName;
   @HiveField(1)
