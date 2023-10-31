@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/benificiary%20List/beneficiary_main_List_page.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/benificiary%20List/benificiary_pages/beneficiary_own_bank_page_screen.dart';
 
 class FundTransferPageScreen2 extends StatefulWidget {
   const FundTransferPageScreen2({Key? key}) : super(key: key);
@@ -129,12 +131,17 @@ class _FundTransferPageScreen2State extends State<FundTransferPageScreen2> {
                 alignment: Alignment.centerRight,
                 child: Column(
                   children: [
-                    Text("Beneficiry Management",
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.red,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    InkWell(
+                      onTap:(){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context)=>BeneficiaryMainListPage()));
+                      },
+                      child: Text("Beneficiry Management",
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.red,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      ),
                     ),
                     Container(
                       height: 2,
@@ -194,18 +201,23 @@ class _FundTransferPageScreen2State extends State<FundTransferPageScreen2> {
 
                   Expanded(
                     flex: 2,
-                    child: Container(
-                      height: 62,
-                      width: 62,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          border: Border.all(
-                              width: 1,
-                              color: Colors.red
-                          ),
-                          color: Colors.red[100]
+                    child: InkWell(
+                      onTap:(){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context)=>BeneficiaryOwnBankPageScreen()));
+                      },
+                      child: Container(
+                        height: 62,
+                        width: 62,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            border: Border.all(
+                                width: 1,
+                                color: Colors.red
+                            ),
+                            color: Colors.red[100]
+                        ),
+                        child: Icon(Icons.search, color: Colors.red,size: 30,),
                       ),
-                      child: Icon(Icons.search, color: Colors.red,size: 30,),
                     ),
                   )
                 ],

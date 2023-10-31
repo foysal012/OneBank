@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/benificiary%20List/beneficiary_main_List_page.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/fund%20transfer/select_transfer_type_page_screen.dart';
 
 class FundTransferPageScreen5 extends StatefulWidget {
@@ -186,11 +187,16 @@ class _FundTransferPageScreen5State extends State<FundTransferPageScreen5> {
                 alignment: Alignment.centerRight,
                 child: Column(
                   children: [
-                    Text("Beneficiry Management",
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.red,
-                        fontWeight: FontWeight.bold,
+                    InkWell(
+                      onTap:(){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context)=>BeneficiaryMainListPage()));
+                      },
+                      child: Text("Beneficiry Management",
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.red,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                     Container(

@@ -47,7 +47,7 @@ class _BeneficiaryOwnBankPageScreenState extends State<BeneficiaryOwnBankPageScr
                 ),
               ),
 
-              SizedBox(height: MediaQuery.of(context).size.height * 0.03,),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.02,),
 
               ValueListenableBuilder(
                   valueListenable: ownBankBox.listenable(),

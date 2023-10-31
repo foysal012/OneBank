@@ -49,7 +49,7 @@ class _BeneficiaryOtherBankPageScreenState extends State<BeneficiaryOtherBankPag
                 ),
               ),
 
-              SizedBox(height: MediaQuery.of(context).size.height * 0.03,),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.02,),
 
               ValueListenableBuilder(
                   valueListenable: otherBankBox.listenable(),
