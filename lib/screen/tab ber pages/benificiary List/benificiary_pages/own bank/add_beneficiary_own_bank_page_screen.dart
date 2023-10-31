@@ -118,46 +118,6 @@ class _AddBeneficiaryOwnBankPageScreenState extends State<AddBeneficiaryOwnBankP
     )
 
 
-          // TextFieldWidget(
-          //     control: emailadController,
-          //     lavelName: "Account No",
-          // ),
-          //
-          // SizedBox(height: MediaQuery.of(context).size.height * 0.025,),
-          //
-          // TextFieldWidget(
-          //   control: emailadController,
-          //   lavelName: "Account Title",
-          // ),
-          //
-          // SizedBox(height: MediaQuery.of(context).size.height * 0.025,),
-          //
-          // TextFieldWidget(
-          //   control: emailadController,
-          //   lavelName: "Nick Name",
-          // ),
-          //
-          // SizedBox(height: MediaQuery.of(context).size.height * 0.025,),
-          //
-          // TextFieldWidget(
-          //   control: emailadController,
-          //   lavelName: "Mobile Number(Optional)",
-          // ),
-          //
-          // SizedBox(height: MediaQuery.of(context).size.height * 0.025,),
-          //
-          // TextFieldWidget(
-          //   control: emailadController,
-          //   lavelName: "Email Address(Optional)",
-          // ),
-          //
-          // SizedBox(height: MediaQuery.of(context).size.height * 0.04,),
-          //
-          // ButtonWidget(
-          //   onTap: (){},
-          //   title: "PORCEED",
-          // )
-
         ],
       ),
     );

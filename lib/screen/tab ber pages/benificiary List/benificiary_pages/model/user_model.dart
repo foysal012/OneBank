@@ -28,7 +28,7 @@ class UserModelOwnBank extends HiveObject{
 
 
 @HiveType(typeId: 1)
-class UserModelOtherBank{
+class UserModelOtherBank extends HiveObject{
 
   @HiveField(0)
   String? bankName;

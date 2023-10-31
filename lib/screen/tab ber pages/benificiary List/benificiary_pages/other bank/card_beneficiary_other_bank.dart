@@ -3,21 +3,23 @@ import 'package:hive/hive.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/benificiary%20List/benificiary_pages/model/user_model.dart';
 import 'package:onebankltd/screen/tab%20ber%20pages/benificiary%20List/benificiary_pages/own%20bank/add_beneficiary_own_bank_page_screen.dart';
 
-class CardBeneficiary extends StatefulWidget {
-  const CardBeneficiary({Key? key}) : super(key: key);
+class CardBeneficiaryOtherBank extends StatefulWidget {
+  const CardBeneficiaryOtherBank({Key? key}) : super(key: key);
 
   @override
-  State<CardBeneficiary> createState() => _CardBeneficiaryState();
+  State<CardBeneficiaryOtherBank> createState() => _CardBeneficiaryOtherBankState();
 }
 
-class _CardBeneficiaryState extends State<CardBeneficiary> {
+class _CardBeneficiaryOtherBankState extends State<CardBeneficiaryOtherBank> {
+  TextEditingController bankNameController = TextEditingController();
+  TextEditingController branchNameController = TextEditingController();
   TextEditingController cardNoController = TextEditingController();
   TextEditingController cardTitleController = TextEditingController();
   TextEditingController nickNameController = TextEditingController();
   TextEditingController mobileNoController = TextEditingController();
   TextEditingController emailadController = TextEditingController();
 
-  Box ownBankBox = Hive.box("ownbank");
+  Box otherBankBox = Hive.box("otherbank");
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +33,21 @@ class _CardBeneficiaryState extends State<CardBeneficiary> {
           ),
           child: Column(
             children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
+              SizedBox(height: MediaQuery.of(context).size.height * 0.03,),
+
+              TextFieldWidget(
+                control: bankNameController,
+                lavelName: "Bank Name",
               ),
+
+              SizedBox(height: MediaQuery.of(context).size.height * 0.025,),
+
+              TextFieldWidget(
+                control: branchNameController,
+                lavelName: "Branch Name",
+              ),
+
+              SizedBox(height: MediaQuery.of(context).size.height * 0.025,),
               TextFieldWidget(
                 control: cardNoController,
                 lavelName: "Card No",
@@ -72,19 +86,21 @@ class _CardBeneficiaryState extends State<CardBeneficiary> {
               ButtonWidget(
                 onTap: () {
                   if (cardNoController.text != null &&
-                          cardTitleController.text != null &&
-                          nickNameController.text != null ||
+                      cardTitleController.text != null &&
+                      nickNameController.text != null ||
                       mobileNoController.text != null ||
                       emailadController.text != null) {
-                    UserModelOwnBank userModelOwnBank = UserModelOwnBank(
-                      accountNo: cardNoController.text,
-                      accountTitle: cardTitleController.text,
-                      nickName: nickNameController.text,
-                      mobileNo: mobileNoController.text,
-                      emailad: emailadController.text,
+                    UserModelOtherBank userModelOtherBank = UserModelOtherBank(
+                        bankName: bankNameController.text,
+                        branchName: branchNameController.text,
+                        accountNo: cardNoController.text,
+                        accountTitle: cardTitleController.text,
+                        nickName: nickNameController.text,
+                        mobileNo: mobileNoController.text,
+                        emailad: emailadController.text
                     );
 
-                    ownBankBox.add(userModelOwnBank);
+                    otherBankBox.add(userModelOtherBank);
                   }
 
                   Navigator.of(context).pop();

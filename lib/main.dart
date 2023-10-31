@@ -18,6 +18,7 @@ void main() async{
   await Hive.initFlutter();
    Hive.registerAdapter(UserModelOwnBankAdapter());
   var box = Hive.openBox("ownbank");
+  var box1 = Hive.openBox("otherbank");
 
   runApp(const MyApp());
 }
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //home: SignUpPageScreen(),
       //home: BottomNavigationbarPageScreen(),
-        home: BeneficiaryMainListPage(),
+       home: BeneficiaryMainListPage(),
     );
   }
 }
