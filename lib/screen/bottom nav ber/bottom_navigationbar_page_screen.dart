@@ -17,7 +17,7 @@ class _BottomNavigationbarPageScreenState extends State<BottomNavigationbarPageS
   List<Widget> pages = [
     HomePageScreen(),
     ActivitiesPageScreen(),
-    LocationPageScreen(),
+    //LocationPageScreen(),
     ProfilePageScreen(),
   ];
 
@@ -67,11 +67,11 @@ class _BottomNavigationbarPageScreenState extends State<BottomNavigationbarPageS
             backgroundColor: Colors.grey[500],
           ),
 
-          BottomNavigationBarItem(
-            label: "Location",
-            icon: Icon(Icons.location_city),
-            backgroundColor: Colors.grey[500],
-          ),
+          // BottomNavigationBarItem(
+          //   label: "Location",
+          //   icon: Icon(Icons.location_city),
+          //   backgroundColor: Colors.grey[500],
+          // ),
 
           BottomNavigationBarItem(
             label: "Profile",

@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/air_time_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/bill_payment_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/emi_calculator_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/fund_transfer_page_screen.dart';
+import 'package:onebankltd/screen/tab%20ber%20pages/obl_banking_page_screen.dart';
 
 class DrawerPageScreen extends StatefulWidget {
   const DrawerPageScreen({Key? key}) : super(key: key);
@@ -75,7 +80,7 @@ class _DrawerPageScreenState extends State<DrawerPageScreen> {
 
                       DrawerItemWidget(
                         onTap: () {
-
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => OblBankingPageScreen()));
                         },
                         title: "Banking",
                       ),
@@ -86,7 +91,7 @@ class _DrawerPageScreenState extends State<DrawerPageScreen> {
 
                       DrawerItemWidget(
                         onTap: () {
-
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => FundTransferPageScreen()));
                         },
                         title: "Fund Transfer",
                       ),
@@ -97,7 +102,7 @@ class _DrawerPageScreenState extends State<DrawerPageScreen> {
 
                       DrawerItemWidget(
                         onTap: () {
-
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => BillPaymentPageScreen()));
                         },
                         title: "Bill Pay",
                       ),
@@ -108,7 +113,7 @@ class _DrawerPageScreenState extends State<DrawerPageScreen> {
 
                       DrawerItemWidget(
                         onTap: () {
-
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => AirTimePageScreen()));
                         },
                         title: "Airtime",
                       ),
@@ -119,7 +124,7 @@ class _DrawerPageScreenState extends State<DrawerPageScreen> {
 
                       DrawerItemWidget(
                         onTap: () {
-
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => EmiCalculatorPageScreen()));
                         },
                         title: "EMI Calculator",
                       ),
